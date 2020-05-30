@@ -1,0 +1,27 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "Playground for Leetcode challenges and problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo-hdz/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo-hdz/leetcode/issues"
+  },
+  "homepage": "https://github.com/ricardo-hdz/leetcode#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0"
+  },
+  "dependencies": {
+    "typescript": "^3.9.3"
+  }
+}
