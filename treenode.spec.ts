@@ -38,7 +38,7 @@ describe('TreeNode', () => {
         let node2 = new TreeNode(2, node4, node5);
 
         tree = new TreeNode(1, node2, node3);
-        expect(tree.inorder()).toEqual('42513');
+        expect(tree.inorder()).toEqual([4,2,5,1,3]);
     });
 
     it('should traverse postorder successfully', () => {
@@ -49,7 +49,7 @@ describe('TreeNode', () => {
         let node2 = new TreeNode(2, node4, node5);
 
         tree = new TreeNode(1, node2, node3);
-        expect(tree.postorder()).toEqual('45231');
+        expect(tree.postorder()).toEqual([4,5,2,3,1]);
     });
 
     it('should traverse preorder successfully', () => {
@@ -60,6 +60,6 @@ describe('TreeNode', () => {
         let node2 = new TreeNode(2, node4, node5);
 
         tree = new TreeNode(1, node2, node3);
-        expect(tree.preorder()).toEqual('12453');
+        expect(tree.preorder()).toEqual([1,2,4,5,3]);
     });
 });

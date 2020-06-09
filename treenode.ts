@@ -89,43 +89,44 @@ export class TreeNode {
 
     inorder(tree: TreeNode = this.root) {
         // left, root, right
-        let str = '';
+        let t = [];
         if (tree.leftChild) {
-            str = str + this.inorder(tree.leftChild);
+            t = t.concat(this.inorder(tree.leftChild));
         }
-        str = str + tree.val;
+        t.push(tree.val);
         if (tree.rightChild) {
-            str = str + this.inorder(tree.rightChild);
+            t = t.concat(this.inorder(tree.rightChild));
         }
-        return str;
+        return t;
     }
 
     postorder(tree: TreeNode = this.root) {
         // left, right, root
-        let str = '';
+        let t = [];
         if (tree.leftChild) {
-            str = str + this.postorder(tree.leftChild);
+            t = t.concat(this.postorder(tree.leftChild));
         }
         if (tree.rightChild) {
-            str = str + this.postorder(tree.rightChild);
+            t = t.concat(this.postorder(tree.rightChild));
         }
-        str = str + tree.val;
-        return str;
+        t.push(tree.val);
+        return t;
     }
 
     preorder(tree: TreeNode = this.root) {
         // root, left, right
-        let str = '';
-        str = str + tree.val;
+        let t = [];
+        t.push(tree.val);
         if (tree.leftChild) {
-            str = str + this.preorder(tree.leftChild);
+            t = t.concat(this.preorder(tree.leftChild));
         }
         if (tree.rightChild) {
-            str = str + this.preorder(tree.rightChild);
+            t = t.concat(this.preorder(tree.rightChild));
         }
-        return str;
+        return t;
     }
 
     toLinkedList() {}
+    toDoubleLinkedList() {}
 
 }
